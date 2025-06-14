@@ -318,44 +318,44 @@ Looking for an opportunity to contribute to dynamic projects and grow as a profe
 
     {/* Right side: Skill Categories */}
     <div className="skills-content">
-    {[
-  {
-    title: 'Front-End',
-    skills: [
-      { icon: 'fa-html5', name: 'HTML' },
-      { icon: 'fa-css3-alt', name: 'CSS' },
-      { icon: 'fa-js', name: 'JavaScript' },
-      { icon: 'fa-bootstrap', name: 'Bootstrap' },
-      { icon: 'fa-flutter', name: 'Flutter' },
-      { icon: 'fa-tailwind', name: 'Tailwind' },
-      { icon: 'fa-react', name: 'React js' },
-    ]
-  },
-  {
-    title: 'Back-End',
-    skills: [
-      { icon: 'fa-database', name: 'MySQL' },
-      { icon: 'fa-php', name: 'PHP' },
-      { icon: 'fa-fire', name: 'Firebase' },
-    ]
-  },
-  {
-    title: 'Designing',
-    skills: [
-      { icon: 'fa-figma', name: 'Figma' },
-      { icon: 'fa-palette', name: 'Canva' },
-      { icon: 'fa-vector-square', name: 'Framer' },
-    ]
-  },
-  {
-    title: 'Version Control',
-    skills: [
-      { icon: 'fa-github', name: 'GitHub' },
-      { icon: '', name: 'Git' },
-    ]
-  },
-].map((category, index) => (
-  <div
+      {[
+        {
+          title: 'Front-End',
+          skills: [
+            { icon: 'fa-html5', name: 'HTML' },
+            { icon: 'fa-css3-alt', name: 'CSS' },
+            { icon: 'fa-js', name: 'JavaScript' },
+            { icon: 'fa-bootstrap', name: 'Bootstrap' },
+            { icon: 'fa-flutter', name: 'Flutter' },
+            { icon: 'fa-tailwind', name: 'Tailwind' },
+            { icon: 'fa-react', name: 'React js' },
+          ]
+        },
+        {
+          title: 'Back-End',
+          skills: [
+            { icon: 'fa-database', name: 'MySQL' },
+            { icon: 'fa-php', name: 'PHP' },
+            { icon: 'fa-fire', name: 'Firebase' },
+          ]
+        },
+        {
+          title: 'Designing',
+          skills: [
+            { icon: 'fa-figma', name: 'Figma' },
+            { icon: 'fa-palette', name: 'Canva' },
+            { icon: 'fa-vector-square', name: 'Framer' },
+          ]
+        },
+        {
+          title: 'Version Control',
+          skills: [
+            { icon: 'fa-github', name: 'GitHub' },
+            { icon: '', name: 'Git' },
+          ]
+        },
+      ].map((category, index) => (
+       <div
     className={`skill-category-box fade-in ${category.title === 'Front-End' ? 'frontend-skill-box' : ''}`}
     key={index}
   >
@@ -371,8 +371,6 @@ Looking for an opportunity to contribute to dynamic projects and grow as a profe
     </div>
   </div>
 ))}
-
-     
     </div>
   </div>
 </section>
