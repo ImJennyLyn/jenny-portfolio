@@ -374,352 +374,56 @@ Looking for an opportunity to contribute to dynamic projects and grow as a profe
     </div>
   </div>
 </section>
-
-
-      
-
-
-{/* project section */}
-     <section id="projects">
-  <h2 className="project-h2">My Projects</h2>
-
-  <div className="tab-bar">
-    <button className="tab-button active" data-category="all">All</button>
-    <button className="tab-button" data-category="mobile">Mobile App</button>
-    <button className="tab-button" data-category="web">Website</button>
-    <button className="tab-button" data-category="design">Design</button>
-  </div>
-
-  <div className="projects-wrapper">
-    <button className="slide-btn left-btn">&#8592;</button>
-
-    <div className="projects-container">
-      {/* First Page */}
-      <div className="projects-page active">
-
-        {/* SOMO */}
-        <div className="project-box" data-category="mobile">
-          <a href="https://imjennylyn.github.io/Astromind-Explorer/" target="_blank" rel="noreferrer" className="project-link">
-            <div className="image-container">
-              <video
-  className="project-image"
-  autoPlay
-  muted
-  loop
-  playsInline
-  src={sommo}
-/>
-              <div className="project-info">
-                <h3 className="project-title">SOMO</h3>
-                <div className="tech-stack">
-                  <div className="language-flutter"><i className="fa-solid fa-mobile-screen-button"></i> Flutter</div>
-                  <div className="language-box"><i className="fa-solid fa-fire"></i> Firebase</div>
-                  <div className="language-php"><i className="fa-solid fa-code"></i> Dart</div>
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-
-      {/* Astromind Explorer */}
-<div className="project-box" data-category="mobile">
-  <a
-    href="https://imjennylyn.github.io/Astromind-Explorer/"
-    target="_blank"
-    rel="noreferrer"
-    className="project-link"
-  >
-    <div className="image-container">
-     <video
-  className="project-image"
-  autoPlay
-  muted
-  loop
-  playsInline
-  src={astrominds}
-/>
-      <div className="project-info">
-        <h3 className="project-title">Astromind Explorer</h3>
-        <div className="tech-stack">
-          <div className="language-flutter">
-            <i className="fa-solid fa-mobile-screen-button"></i> Flutter
-          </div>
-          <div className="language-box">
-            <i className="fa-solid fa-fire"></i> Firebase
-          </div>
-          <div className="language-php">
-            <i className="fa-solid fa-code"></i> Dart
-          </div>
-        </div>
-      </div>
-    </div>
-  </a>
-</div>
-
-        {/* Color Game */}
-        <div className="project-box" data-category="mobile">
-          <a href="https://imjennylyn.github.io/Color-Game---Flutter-App/" target="_blank" rel="noreferrer" className="project-link">
-            <div className="image-container">
-               <video
-  className="project-image"
-  autoPlay
-  muted
-  loop
-  playsInline
-  src={color}
-/>
-              <div className="project-info">
-                <h3 className="project-title">Color Game</h3>
-                <div className="tech-stack">
-                  <div className="language-box"><i className="fa-solid fa-mobile-screen-button"></i> Flutter</div>
-                  <div className="language-box"><i className="fa-solid fa-code"></i> Dart</div>
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-
-           {/* Business Shop */}
-        <div className="project-box" data-category="mobile">
-          <a href="https://imjennylyn.github.io/Color-Game---Flutter-App/" target="_blank" rel="noreferrer" className="project-link">
-            <div className="image-container">
-               <video
-  className="project-image"
-  autoPlay
-  muted
-  loop
-  playsInline
-  src={businesss}
-/>
-              <div className="project-info">
-                <h3 className="project-title">Business Shop</h3>
-                <div className="tech-stack">
-                  <div className="language-flutter"><i className="fa-solid fa-mobile-screen-button"></i> Flutter</div>
-                  <div className="language-php"><i className="fa-brands fa-php"></i> PHP</div>
-                  <div className="language-box"><i className="fa-solid fa-code"></i> Dart</div>
-                  <div className="language-box"><i className="fa-solid fa-database"></i> MySQL</div>
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-
-   {/* Diareal App */}
-        <div className="project-box" data-category="mobile">
-          <a href="https://github.com/ImJennyLyn/Diareal" target="_blank" rel="noreferrer" className="project-link">
-            <div className="image-container">
- <video
-  className="project-image"
-  autoPlay
-  muted
-  loop
-  playsInline
-  src={diarealapp}
-
-/>              <div className="project-info">
-                <h3 className="project-title">Diareal App</h3>
-                <div className="tech-stack">
-                  <div className="language-flutter"><i className="fa-solid fa-mobile-screen-button"></i> Flutter</div>
-                  <div className="language-php"><i className="fa-brands fa-php"></i> PHP</div>
-                  <div className="language-box"><i className="fa-solid fa-code"></i> Dart</div>
-                  <div className="language-box"><i className="fa-solid fa-database"></i> MySQL</div>
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-
-         {/* Coast */}
-        <div className="project-box" data-category="web">
-          <a href="https://github.com/ImJennyLyn/Hotel-Booking-System---The-Coast" target="_blank" rel="noreferrer" className="project-link">
-            <div className="image-container">
-            <video
-  className="project-image"
-  autoPlay
-  muted
-  loop
-  playsInline
-  src={coast}
-
-/>   
-              <div className="project-info">
-                <h3 className="project-title">Coast</h3>
-                <div className="tech-stack">
-                  <div className="language-php"><i className="fa-brands fa-react"></i> React</div>
-                  <div className="language-javascript"><i className="fa-brands fa-js"></i> JavaScript</div>
-                  <div className="language-box"><i className="fa-brands fa-css3-alt"></i> CSS</div>
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-              
-
-                {/* design */}
-        <div className="project-box" data-category="design">
-          <a href="https://github.com/ImJennyLyn/Hotel-Booking-System---The-Coast" target="_blank" rel="noreferrer" className="project-link">
-            <div className="image-container">
-            <video
-                className="project-image"
-                autoPlay
-                muted
-                loop
-                playsInline
-                src={cct}
-
-              />   
-              <div className="project-info">
-                <h3 className="project-title">Program brochure</h3>
-                <div className="tech-stack">
-                  <div className="language-php"><i className="fa-solid fa-palette"></i> Canva</div>
-                 
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-
-         <div className="project-box" data-category="design">
-          <a href="https://github.com/ImJennyLyn/Hotel-Booking-System---The-Coast" target="_blank" rel="noreferrer" className="project-link">
-            <div className="image-container">
-            <video
-                className="project-image"
-                autoPlay
-                muted
-                loop
-                playsInline
-                src={brochure}
-
-              />   
-              <div className="project-info">
-                <h3 className="project-title">Application brochure</h3>
-                <div className="tech-stack">
-                  <div className="language-php"><i className="fa-solid fa-palette"></i> Canva</div>
-                 
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-              
-          
-  {/* crud */}
- <div className="project-box" data-category="web">
-          <a href="https://github.com/ImJennyLyn/CRUD_PHP/" target="_blank" rel="noreferrer" className="project-link">
-            <div className="image-container">
-   <video
-                className="project-image"
-                autoPlay
-                muted
-                loop
-                playsInline
-                src={crud}
-
-              />                 <div className="project-info">
-                <h3 className="project-title">CRUD</h3>
-                <div className="tech-stack">
-                  <div className="language-php"><i className="fa-brands fa-php"></i> PHP</div>
-                  <div className="language-box"><i className="fa-solid fa-database"></i> MySQL</div>
-                  <div className="language-box"><i className="fa-brands fa-css3-alt"></i> Tailwind</div>
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-
-       {/* Snap Photobooth */}
-        <div className="project-box" data-category="web">
-          <a href="https://github.com/ImJennyLyn/snap-photobooth" target="_blank" rel="noreferrer" className="project-link">
-            <div className="image-container">
-<video
-                className="project-image"
-                autoPlay
-                muted
-                loop
-                playsInline
-                src={snap}
-
-              />                <div className="project-info">
-                <h3 className="project-title">Snap Photobooth</h3>
-                <div className="tech-stack">
-                  <div className="language-php"><i className="fa-brands fa-react"></i> React</div>
-                  <div className="language-javascript"><i className="fa-brands fa-js"></i> JavaScript</div>
-                  <div className="language-box"><i className="fa-brands fa-css3-alt"></i> CSS</div>
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-       
-
-         
-
-        {/* Image Search */}
-        {/* <div className="project-box" data-category="web">
-          <a href="https://github.com/ImJennyLyn/ImageSearch" target="_blank" rel="noreferrer" className="project-link">
-            <div className="image-container">
-              <img src={imgsearch} alt="imgsearch" className="project-image" />
-              <div className="project-info">
-                <h3 className="project-title">Image Search</h3>
-                <div className="tech-stack">
-                  <div className="language-php"><i className="fa-brands fa-html5"></i> HTML</div>
-                  <div className="language-php"><i className="fa-brands fa-css3-alt"></i> CSS</div>
-                  <div className="language-javascript"><i className="fa-brands fa-js"></i> JavaScript</div>
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>  */}
-
-        {/* To Do List
-        <div className="project-box" data-category="web">
-          <a href="https://github.com/ImJennyLyn/Diareal" target="_blank" rel="noreferrer" className="project-link">
-            <div className="image-container">
-              <img src={diareal} alt="todo" className="project-image" />
-              <div className="project-info">
-                <h3 className="project-title">To Do List</h3>
-                <div className="tech-stack">
-                  <div className="language-php"><i className="fa-brands fa-html5"></i> HTML</div>
-                  <div className="language-php"><i className="fa-brands fa-css3-alt"></i> CSS</div>
-                  <div className="language-javascript"><i className="fa-brands fa-js"></i> JavaScript</div>
-                </div>
-              </div>
-            </div>
-          </a>
-        </div> */}
-        
-      </div>
-      
-      
-
-      {/* Second Page */}
-      <div className="projects-page">
-
-        {/* Dashboard UI */}
-        {/* <div className="project-box" data-category="design">
-          <a href="https://www.figma.com/file/example1" target="_blank" rel="noreferrer" className="project-link">
-            <div className="image-container">
-              <img src={diarealApp} alt="dashboard ui" className="project-image" />
-              <div className="project-info">
-                <h3 className="project-title">Dashboard UI</h3>
-                <div className="tech-stack">
-                  <div className="language-box"><i className="fa-brands fa-figma"></i> Figma</div>
-                  <div className="language-box"><i className="fa-solid fa-palette"></i> UI/UX</div>
-                </div>
-              </div>
-            </div>
-          </a>
-        </div> */}
-
-     
-
-      
-
-
+<section className="project-section">
+  <div className="project-wrapper">
+    {/* Left Column */}
+    <div className="project-left">
+      <h2 className="project-h2">A Glimpse of My Works</h2>
+      <div className="project-buttons">
+        <button className="filter-button">Mobile</button>
+        <button className="filter-button">Website</button>
+        <button className="filter-button">Design</button>
       </div>
     </div>
 
-    <button className="slide-btn right-btn">&#8594;</button>
+    {/* Right Column */}
+    <div className="project-right">
+      <div className="project-card">
+        <img src={designImage} alt="Project 1" className="project-image" />
+        <div className="project-content">
+          <p className="project-category">Popular Artists</p>
+          <h2 className="project-title">Collaborate with your team more effective now</h2>
+          <p className="project-description">
+            Collaborate with your team with your team with your team.
+          </p>
+          <button className="project-button">→</button>
+        </div>
+      </div>
+
+      <div className="project-card">
+        <img src={designImage} alt="Project 2" className="project-image" />
+        <div className="project-content">
+          <p className="project-category">Popular Artists</p>
+          <h2 className="project-title">Collaborate with your team more effective now</h2>
+          <p className="project-description">
+            Collaborate with your team with your team with your team.
+          </p>
+          <button className="project-button">→</button>
+        </div>
+      </div>
+
+      <div className="project-card">
+        <img src={designImage} alt="Project 3" className="project-image" />
+        <div className="project-content">
+          <p className="project-category">Popular Artists</p>
+          <h2 className="project-title">Collaborate with your team more effective now</h2>
+          <p className="project-description">
+            Collaborate with your team with your team with your team.
+          </p>
+          <button className="project-button">→</button>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
