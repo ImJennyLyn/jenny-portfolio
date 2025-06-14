@@ -248,8 +248,8 @@ Looking for an opportunity to contribute to dynamic projects and grow as a profe
 <img src={mobileImage} alt="Mobile" />
             </div>
             <h3 className="service-title">Mobile Dev</h3>
-            <p className="service-description">
-             I build responsive and elegant websites using <strong>HTML</strong>, <strong>CSS</strong>, <strong>JavaScript</strong>, and <strong>React</strong>. From static pages to dynamic web apps, I make sure your site looks beautiful on every screen.
+           <p className="service-description">
+             I create modern cross-platform apps using <strong>Flutter</strong> and <strong>Dart</strong>. Whether it’s a simple idea or a full app, I focus on performance and aesthetic experience for Android
             </p>
           </div>
 
@@ -258,9 +258,10 @@ Looking for an opportunity to contribute to dynamic projects and grow as a profe
 <img src={webImage} alt="Web" />
             </div>
             <h3 className="service-title">Web Dev</h3>
-            <p className="service-description">
-             I create modern cross-platform apps using <strong>Flutter</strong> and <strong>Dart</strong>. Whether it’s a simple idea or a full app, I focus on performance and aesthetic experience for Android
+             <p className="service-description">
+             I build responsive and elegant websites using <strong>HTML</strong>, <strong>CSS</strong>, <strong>JavaScript</strong>, and <strong>React</strong>. From static pages to dynamic web apps, I make sure your site looks beautiful on every screen.
             </p>
+            
           </div>
         </div>
       </section>
@@ -374,6 +375,8 @@ Looking for an opportunity to contribute to dynamic projects and grow as a profe
     </div>
   </div>
 </section>
+
+{/* Project Section */}
 <section className="project-section">
   <div className="project-wrapper">
     {/* Left Column */}
