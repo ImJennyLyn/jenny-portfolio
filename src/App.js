@@ -288,7 +288,7 @@ Looking for an opportunity to contribute to dynamic projects and grow as a profe
 
       <div className="experience-item fade-in">
         <div className="experience-box">
-          <span className="experience-date">Jul. 2025 – Sept. 2025</span>
+          <span className="experience-date">Jul. 2024 – Sept. 2024</span>
           <h3>Junior Web Developer</h3>
           <p className="experience-company">HR Primo Services</p>
           <p className="experience-desc">Assisted in building and maintaining web applications using HTML, CSS, JavaScript, and React.</p>
