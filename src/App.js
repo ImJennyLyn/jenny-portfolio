@@ -501,31 +501,33 @@ Looking for an opportunity to contribute to dynamic projects and grow as a profe
   </div>
 </section>
 
+<section className="contact-section">
 
-      {/* Contact Section */}
-      <section id="contact">
+  {/* Left Column */}
+  <section className="contact-info">
+    <h2>Get in Touch with Me</h2>
+    <p>I'm open for collaborations, freelance projects, or just a friendly chat.</p>
+    <p>Email me directly or use the form to send your message.</p>
+  </section>
+
+  {/* Right Column */}
+  <section className="contact-form">
+    <form action="mailto:yourname@example.com" method="POST" encType="text/plain">
+
+      <input type="text" name="name" placeholder="Your Name" required className="input-field" />
+
+      <input type="email" name="email" placeholder="Your Email" required className="input-field" />
+
+      <textarea name="message" placeholder="Your Message" required className="message-input"></textarea>
+
+      <button type="submit" className="submit-button">Send Message</button>
       
-          <h2 className="contact-h2">Contact</h2>
-          <p className="contact-p">Get in Touch</p>
+    </form>
+  </section>
 
-          <div className="contact-info">
-            <a href="mailto:jvallador.jennyylyn10@gmail.com" className="contact-item">
-              <i className="fas fa-envelope"></i> vallador.jennylyn10@gmail.com
-            </a>
-            <a href="tel:09260742611" className="contact-item">
-              <i className="fas fa-phone"></i> 09260742611
-            </a>
-          </div>
+</section>
 
-          <a
-            href="https://drive.google.com/drive/folders/1LFM5OhYZcuptbEW2INbqqZPt2qF9EBIs?usp=drive_link"
-            download="Resume-Jenny"
-            className="download-btn"
-          >
-            Download My Resume
-          </a>
-       
-      </section>
+
       
          <div class="footer">
         <p class="footer-jenny">Jenny Lyn</p>
