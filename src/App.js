@@ -396,36 +396,36 @@ Looking for an opportunity to contribute to dynamic projects and grow as a profe
       <div className="project-card">
         <img src={bizshop} alt="Project 1" className="project-image" />
         <div className="project-content">
-          <p className="project-category">Popular Artists</p>
-          <h2 className="project-title">Collaborate with your team more effective now</h2>
+          <p className="project-category">FLUTTER | MYSQL | PHP</p>
+          <h2 className="project-title">Business Listing Shop Application</h2>
           <p className="project-description">
             Collaborate with your team with your team with your team.
           </p>
-          <button className="project-button">→</button>
+          <button className="project-button">see more →</button>
         </div>
       </div>
 
       <div className="project-card">
         <img src={sommo} alt="Project 2" className="project-image" />
         <div className="project-content">
-          <p className="project-category">Popular Artists</p>
-          <h2 className="project-title">Collaborate with your team more effective now</h2>
+          <p className="project-category">FLUTTER | FIREBASE</p>
+          <h2 className="project-title">Soil Moisture Monitoring Application</h2>
           <p className="project-description">
             Collaborate with your team with your team with your team.
           </p>
-          <button className="project-button">→</button>
+          <button className="project-button" >see more →</button>
         </div>
       </div>
 
       <div className="project-card">
         <img src={explorer} alt="Project 3" className="project-image" />
         <div className="project-content">
-          <p className="project-category">Popular Artists</p>
-          <h2 className="project-title">Collaborate with your team more effective now</h2>
+          <p className="project-category">FLUTTER | FIREBASE</p>
+          <h2 className="project-title">Astromind Explore Mini Games</h2>
           <p className="project-description">
             Collaborate with your team with your team with your team.
           </p>
-          <button className="project-button">→</button>
+          <button className="project-button">see more →</button>
         </div>
       </div>
     </div>

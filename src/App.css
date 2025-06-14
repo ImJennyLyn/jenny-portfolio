@@ -674,6 +674,7 @@ color: #DDD4CD;
   display: flex;
   flex-direction: row;
   gap: 1rem;
+
  
 }
 
@@ -715,7 +716,7 @@ color: #DDD4CD;
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  height: 35rem;
+  height: 38rem;
   width:15rem !important;
 
 }
@@ -733,6 +734,7 @@ color: #DDD4CD;
 .project-title {
   font-size: 1.2rem;
   font-weight: bold;
+  color: #555;
 }
 
 .project-description {
@@ -746,7 +748,8 @@ color: #DDD4CD;
   font-size: 1.5rem;
   cursor: pointer;
   margin-top: 1rem;
- 
+  font-size:1rem;
+  margin-left:10rem;
 }
 
 
