@@ -21,6 +21,9 @@ import explorer from "./images/explorer.png";
 import snapp from "./images/snapp.png";
 import crudd from "./images/crudd.png";
 import hotel from "./images/hotel.png";
+import info from "./images/info.png";
+import cctt from "./images/cctt.png";
+import som from "./images/som.png";
 
 
 
@@ -84,25 +87,25 @@ const projects = [
   {
     id: 7,
     category: 'Design',
-    image: sommo,
-    tech: 'FIGMA | PHOTOSHOP',
-    title: 'Creative Design Showcase',
+    image: som,
+    tech: 'CANVA',
+    title: 'Soil Moisture App Brochure',
     description: 'A collection of my creative design projects.',
   },
    {
     id: 8,
     category: 'Design',
-    image: sommo,
-    tech: 'FIGMA | PHOTOSHOP',
-    title: 'Creative Design Showcase',
+    image: cctt,
+    tech: 'CANVA',
+    title: 'Program Cover Brochure',
     description: 'A collection of my creative design projects.',
   },
    {
     id: 9,
     category: 'Design',
-    image: sommo,
-    tech: 'FIGMA | PHOTOSHOP',
-    title: 'Creative Design Showcase',
+    image: info,
+    tech: 'CANVA ',
+    title: 'Soil Moisture System Infographics',
     description: 'A collection of my creative design projects.',
   },
   // Add more as needed
