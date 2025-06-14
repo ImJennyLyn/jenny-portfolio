@@ -6,7 +6,6 @@ import designImage from './images/design.png';
 import mobileImage from './images/mobile.png';
 import webImage from './images/web.png';
 import astrominds from './images/astromind.mp4';
-import sommo from './images/somo.mp4';
 import businesss from './images/business.mp4';
 import diarealapp from './images/diarealApp.mp4';
 import color from './images/colorgame.mp4';
@@ -16,6 +15,9 @@ import cct from "./images/cct.mp4";
 import crud from "./images/crud.mp4";
 import snap from "./images/snap.mp4";
 import brochure from "./images/brochure.mp4";
+import bizshop from "./images/bizshop.png";
+import sommo from "./images/sommo.png";
+import explorer from "./images/explorer.png";
 
 
 function App() {
@@ -392,7 +394,7 @@ Looking for an opportunity to contribute to dynamic projects and grow as a profe
     {/* Right Column */}
     <div className="project-right">
       <div className="project-card">
-        <img src={designImage} alt="Project 1" className="project-image" />
+        <img src={bizshop} alt="Project 1" className="project-image" />
         <div className="project-content">
           <p className="project-category">Popular Artists</p>
           <h2 className="project-title">Collaborate with your team more effective now</h2>
@@ -404,7 +406,7 @@ Looking for an opportunity to contribute to dynamic projects and grow as a profe
       </div>
 
       <div className="project-card">
-        <img src={designImage} alt="Project 2" className="project-image" />
+        <img src={sommo} alt="Project 2" className="project-image" />
         <div className="project-content">
           <p className="project-category">Popular Artists</p>
           <h2 className="project-title">Collaborate with your team more effective now</h2>
@@ -416,7 +418,7 @@ Looking for an opportunity to contribute to dynamic projects and grow as a profe
       </div>
 
       <div className="project-card">
-        <img src={designImage} alt="Project 3" className="project-image" />
+        <img src={explorer} alt="Project 3" className="project-image" />
         <div className="project-content">
           <p className="project-category">Popular Artists</p>
           <h2 className="project-title">Collaborate with your team more effective now</h2>
