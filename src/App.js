@@ -18,72 +18,158 @@ import brochure from "./images/brochure.mp4";
 import bizshop from "./images/bizshop.png";
 import sommo from "./images/sommo.png";
 import explorer from "./images/explorer.png";
+import snapp from "./images/snapp.png";
+import crudd from "./images/crudd.png";
+import hotel from "./images/hotel.png";
+
+
+
 
 
 function App() {
 
   const [scrolled, setScrolled] = useState(false);
+  const [selectedCategory, setSelectedCategory] = useState('Mobile');
 
-  useEffect(() => {
-  // PROJECTS PAGINATION (unchanged)
-  const container = document.querySelector('.projects-container');
-  const boxes = container ? Array.from(container.querySelectorAll('.project-box')) : [];
-  const leftBtn = document.querySelector('.left-btn');
-  const rightBtn = document.querySelector('.right-btn');
+// Move projects array here so it's accessible in JSX
+const projects = [
+  {
+    id: 1,
+    category: 'Mobile',
+    image: bizshop,
+    tech: 'FLUTTER | MYSQL | PHP',
+    title: 'Business Listing Shop Application',
+    description: 'Collaborate with your team with your team with your team.',
+  },
+  {
+    id: 2,
+    category: 'Mobile',
+    image: sommo,
+    tech: 'FLUTTER | FIREBASE',
+    title: 'Soil Moisture Monitoring Application',
+    description: 'Collaborate with your team with your team with your team.',
+  },
+  {
+    id: 3,
+    category: 'Mobile',
+    image: explorer,
+    tech: 'FLUTTER | FIREBASE',
+    title: 'Astromind Explore Mini Games',
+    description: 'Collaborate with your team with your team with your team.',
+  },
+  {
+    id: 4,
+    category: 'Website',
+    image: hotel,
+    tech: 'REACT JS| PHP | MYSQL',
+    title: 'The Coast Hotel Booking Website',
+    description: 'Your portfolio to showcase your awesome skills.',
+  },
+  {
+     id: 5,
+    category: 'Website',
+    image: snapp,
+    tech: 'REACT JS| PHP | MYSQL',
+    title: 'Snap Photoboot Website',
+    description: 'Your portfolio to showcase your awesome skills.',
+  },
+  {
+     id: 6,
+    category: 'Website',
+    image: crudd,
+    tech: 'HTML | TAILWIND | PHP | MYSQL',
+    title: 'CRUD Operation Task',
+    description: 'Your portfolio to showcase your awesome skills.',
+  },
+  {
+    id: 7,
+    category: 'Design',
+    image: sommo,
+    tech: 'FIGMA | PHOTOSHOP',
+    title: 'Creative Design Showcase',
+    description: 'A collection of my creative design projects.',
+  },
+   {
+    id: 8,
+    category: 'Design',
+    image: sommo,
+    tech: 'FIGMA | PHOTOSHOP',
+    title: 'Creative Design Showcase',
+    description: 'A collection of my creative design projects.',
+  },
+   {
+    id: 9,
+    category: 'Design',
+    image: sommo,
+    tech: 'FIGMA | PHOTOSHOP',
+    title: 'Creative Design Showcase',
+    description: 'A collection of my creative design projects.',
+  },
+  // Add more as needed
+];
 
-  let currentPage = 0;
-  const boxesPerPage = 9;
-  let pages = [];
+useEffect(() => {
+// PROJECTS PAGINATION (unchanged)
+const container = document.querySelector('.projects-container');
+const boxes = container ? Array.from(container.querySelectorAll('.project-box')) : [];
+const leftBtn = document.querySelector('.left-btn');
+const rightBtn = document.querySelector('.right-btn');
 
-  function groupIntoPages() {
-    if (!container) return;
-    container.innerHTML = '';
-    pages = [];
+let currentPage = 0;
+const boxesPerPage = 9;
+let pages = [];
 
-    for (let i = 0; i < boxes.length; i += boxesPerPage) {
-      const page = document.createElement('div');
-      page.classList.add('projects-page');
-      if (i === 0) page.classList.add('active');
-      boxes.slice(i, i + boxesPerPage).forEach(box => page.appendChild(box));
-      container.appendChild(page);
-      pages.push(page);
-    }
+function groupIntoPages() {
+  if (!container) return;
+  container.innerHTML = '';
+  pages = [];
+
+  for (let i = 0; i < boxes.length; i += boxesPerPage) {
+    const page = document.createElement('div');
+    page.classList.add('projects-page');
+    if (i === 0) page.classList.add('active');
+    boxes.slice(i, i + boxesPerPage).forEach(box => page.appendChild(box));
+    container.appendChild(page);
+    pages.push(page);
   }
+}
 
-  function showPage(index) {
-    pages.forEach((page, i) => {
-      page.classList.toggle('active', i === index);
-    });
-
-    if (leftBtn && rightBtn) {
-      leftBtn.style.display = index === 0 ? 'none' : 'inline-block';
-      rightBtn.style.display = index === pages.length - 1 ? 'none' : 'inline-block';
-    }
-  }
+function showPage(index) {
+  pages.forEach((page, i) => {
+    page.classList.toggle('active', i === index);
+  });
 
   if (leftBtn && rightBtn) {
-    leftBtn.addEventListener('click', () => {
-      if (currentPage > 0) {
-        currentPage--;
-        showPage(currentPage);
-      }
-    });
-
-    rightBtn.addEventListener('click', () => {
-      if (currentPage < pages.length - 1) {
-        currentPage++;
-        showPage(currentPage);
-      }
-    });
+    leftBtn.style.display = index === 0 ? 'none' : 'inline-block';
+    rightBtn.style.display = index === pages.length - 1 ? 'none' : 'inline-block';
   }
+}
 
-  groupIntoPages();
-  showPage(currentPage);
+if (leftBtn && rightBtn) {
+  leftBtn.addEventListener('click', () => {
+    if (currentPage > 0) {
+      currentPage--;
+      showPage(currentPage);
+    }
+  });
 
-  // ✅ SCROLL HEADER LOGIC — fixed
-  const handleScroll = () => {
-    setScrolled(window.scrollY > 10);
-  };
+  rightBtn.addEventListener('click', () => {
+    if (currentPage < pages.length - 1) {
+      currentPage++;
+      showPage(currentPage);
+    }
+  });
+}
+
+groupIntoPages();
+showPage(currentPage);
+
+
+
+// ✅ SCROLL HEADER LOGIC — fixed
+const handleScroll = () => {
+  setScrolled(window.scrollY > 10);
+};
 
   window.addEventListener('scroll', handleScroll);
 
@@ -149,7 +235,7 @@ function App() {
 
   // PROJECT FILTER BUTTONS (unchanged)
   const buttons = document.querySelectorAll('.tab-button');
-  const projects = document.querySelectorAll('.project-box');
+  const project = document.querySelectorAll('.project-box');
 
   buttons.forEach(button => {
     button.addEventListener('click', () => {
@@ -385,50 +471,30 @@ Looking for an opportunity to contribute to dynamic projects and grow as a profe
     <div className="project-left">
       <h2 className="project-h2">A Glimpse of My Works</h2>
       <div className="project-buttons">
-        <button className="filter-button">Mobile</button>
-        <button className="filter-button">Website</button>
-        <button className="filter-button">Design</button>
-      </div>
+  <button className="filter-button" onClick={() => setSelectedCategory('Mobile')}>Mobile</button>
+  <button className="filter-button" onClick={() => setSelectedCategory('Website')}>Website</button>
+  <button className="filter-button" onClick={() => setSelectedCategory('Design')}>Design</button>
+</div>
+
     </div>
 
     {/* Right Column */}
     <div className="project-right">
-      <div className="project-card">
-        <img src={bizshop} alt="Project 1" className="project-image" />
+  {projects
+    .filter((project) => project.category === selectedCategory)
+    .map((project) => (
+      <div className="project-card" key={project.id}>
+        <img src={project.image} alt={project.title} className="project-image" />
         <div className="project-content">
-          <p className="project-category">FLUTTER | MYSQL | PHP</p>
-          <h2 className="project-title">Business Listing Shop Application</h2>
-          <p className="project-description">
-            Collaborate with your team with your team with your team.
-          </p>
+          <p className="project-category">{project.tech}</p>
+          <h2 className="project-title">{project.title}</h2>
+          <p className="project-description">{project.description}</p>
           <button className="project-button">see more →</button>
         </div>
       </div>
+    ))}
+</div>
 
-      <div className="project-card">
-        <img src={sommo} alt="Project 2" className="project-image" />
-        <div className="project-content">
-          <p className="project-category">FLUTTER | FIREBASE</p>
-          <h2 className="project-title">Soil Moisture Monitoring Application</h2>
-          <p className="project-description">
-            Collaborate with your team with your team with your team.
-          </p>
-          <button className="project-button" >see more →</button>
-        </div>
-      </div>
-
-      <div className="project-card">
-        <img src={explorer} alt="Project 3" className="project-image" />
-        <div className="project-content">
-          <p className="project-category">FLUTTER | FIREBASE</p>
-          <h2 className="project-title">Astromind Explore Mini Games</h2>
-          <p className="project-description">
-            Collaborate with your team with your team with your team.
-          </p>
-          <button className="project-button">see more →</button>
-        </div>
-      </div>
-    </div>
   </div>
 </section>
 
