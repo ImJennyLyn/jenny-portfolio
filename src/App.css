@@ -25,7 +25,7 @@ header {
 }
 
 header.scrolled {
-  background-color: #211106; 
+  background-color: #180f09; 
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
@@ -84,7 +84,7 @@ header.scrolled {
 }
 
     nav a:hover {
-      color: #C97B36;
+      color: #e4a177;
     }
     nav a.active {
   color: #fb923c;
@@ -111,10 +111,10 @@ header.scrolled {
 
     .logo {
  
-  font-size: 2rem;
+  font-size: 1.5rem;
   /* font-style: italic;
   font-weight: bold; */
-  font-family: 'Caramel', sans-serif;
+  font-family: 'GFS Didot', serif;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
   color: #DDD4CD;
   
@@ -333,13 +333,14 @@ margin-left:1.8rem;
       height:500px;
     }
     .about-text{
-      margin-top: -10rem;
+      margin-top: -5rem;
       font-family: 'GFS Didot', serif;
       font-size: 1.2rem;
       color: #DDD4CD;
-      margin-top: 2rem;
-      text-align: justify;
       padding: 0 2rem;
+      font-family: 'poppins', sans-serif;
+      line-height: 1.6;
+      margin-left:2rem;
     }
 
      .about-boximage {
@@ -356,7 +357,7 @@ margin-left:1.8rem;
       width: 500px;
       margin-bottom: 3rem;
       margin-right: 10rem;
-     
+      
     }
 
 
@@ -486,16 +487,16 @@ margin-left:1.8rem;
 
 .experience-header {
   text-align: center;
-
     font-family:'GFS Didot', serif;
     font-size: 3rem;
     color:#d2cbb5;
-   
+   margin-top: -1rem;
+   margin-bottom: -2rem;
 }
 
 .experience-box {
   border: 1px solid #f7f8f788;
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: rgba(0, 0, 0, 0.377);
   padding: 1.5rem;
   border-radius: 10px;
   transition: transform 0.3s ease;
@@ -570,7 +571,7 @@ margin-left:1.8rem;
     }
     .service-title
     {
-        margin-top:-1rem;
+        margin-top:-2rem;
         font-weight:bold;
         font: size 20px;
         color: #DDD4CD
@@ -578,21 +579,22 @@ margin-left:1.8rem;
     }
     .service-description
     {
-        margin-top:2rem;
+        margin-top:1rem;
         color: #DDD4CD;
-        font-size: 1rem;
-        text-align: justify;
+        font-size:18px !important;
+        font-family: poppins, sans-serif;
+        text-align: center;
     }
 
     .service-card {
       margin-top: 50px;
-     background-color: #978a7000 !important;   
+     background-color: #01010100 !important;   
      color: white;
       padding: 1.5rem;
       /* border-top-left-radius: 9999px;
       border-top-right-radius: 9999px;  */
       /* box-shadow: 4px 0 5px rgba(0, 0, 0, 0.5); */
-      height: 300px;
+      height: 280px;
       width: 250px;
       margin-bottom: 3rem;
       border-color: #7b6e65;
@@ -611,7 +613,7 @@ margin-left:1.8rem;
       height: 50px;
       width: 50px;
       display: flex;
-      padding-top: 30px;
+      padding-top: 15px;
       margin-left: auto;
       margin-right: auto; 
       margin-top: auto; 
@@ -656,6 +658,29 @@ color: #DDD4CD;
     text-decoration: none; 
 }
 
+.project-description-left{
+  font-size: 1rem !important;
+  color: #ffffff !important;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+  font-family: 'poppins', sans-serif;
+  text-align: justify;
+}
+
+.view-more-link {
+  margin-left: 8px;
+  color: #DDD4CD;
+  font-weight: bold;
+  text-decoration: underline;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.view-more-link:hover {
+  color: #b6aca4;
+}
+
+
 .project-wrapper {
   display: flex;
   gap: 13rem;
@@ -677,7 +702,6 @@ color: #DDD4CD;
 
  
 }
-
 .filter-button {
   padding: 0.7rem 1.2rem;
   border: none;
@@ -685,18 +709,24 @@ color: #DDD4CD;
   background-color: #eaeaea00;
   cursor: pointer;
   font-weight: bold;
-   width:20rem !important;
-   color:white;
-   border-style: solid;
-    border-color: #DDD4CD;
-  border-width: 2px;
-  transition: background-color 0.3s, transform 0.2s;
+  width: 20rem !important;
+  color: white;
+  border: 2px solid #DDD4CD;
+  transition: background-color 0.3s, transform 0.2s, color 0.3s;
 }
+
 .filter-button:hover {
-  background-color: #d4d4d4; 
-  transform: scale(1.02);   
+  background-color: #d4d4d4;
+  transform: scale(1.02);
   color: black;
 }
+
+.filter-button.active {
+  background-color: #DDD4CD;
+  color: black;
+  transform: scale(1.02);
+}
+
 
 /* Right column */
 .project-right {
@@ -710,7 +740,7 @@ color: #DDD4CD;
 
 .project-card {
   flex: 1 1 calc(33.333% - 1rem);
-  background-color: #fff;
+  background-color: #e4d6c9;
   border-radius: 12px;
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
   overflow: hidden;
@@ -878,7 +908,7 @@ color: #DDD4CD;
   justify-content: start;
   align-items: left;
   border: 1px solid #ffffff66;
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: rgba(6, 6, 6, 0.185) !important;
   border-radius: 10px;
   padding: 2rem;
   margin-bottom: 2px;
@@ -896,7 +926,7 @@ color: #DDD4CD;
   justify-content: start;
   align-items: left;
   border: 1px solid #ffffff66;
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: rgba(6, 6, 6, 0.185) !important;
   border-radius: 10px;
   padding: 2rem;
    margin-top: -3rem;
@@ -927,6 +957,7 @@ color: #DDD4CD;
 .skill-head {
   margin-bottom: 1rem;
   color: #f8f8f8;
+  margin-top:2px;
 }
 
 .skills-grid {

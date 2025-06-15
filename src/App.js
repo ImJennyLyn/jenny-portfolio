@@ -263,7 +263,7 @@ const handleScroll = () => {
   return (
     <>
 <header className={scrolled ? 'scrolled' : ''}>
-        <h1 className="logo">Jenny Lyn</h1>
+        <h1 className="logo">JENNY</h1>
         <div class="burger" onclick="toggleMenu()">
       <div></div>
       <div></div>
@@ -276,16 +276,17 @@ const handleScroll = () => {
           <a href="#services">Services</a>
           <a href="#skills">Skills</a>
           <a href="#projects">Projects</a>
-          <a className="contact-nav" href="#contact">Contact</a>
+          <a className="contact-nav" href="#contact-section">Contact</a>
         </nav>
       </header>
+
 <section id="home" className="home">
   <div className="home-content">
     <h2 className="home-h2">Jenny Lyn Vallador</h2>
 
     <div className="home-buttons">
-      <a href="#works" className="btn btn-works">View My Works</a>
-      <a href="#contact" className="btn btn-contact">Contact Me</a>
+      <a href="#projects" className="btn btn-works">View My Works</a>
+      <a href="#contact-section" className="btn btn-contact">Contact Me</a>
     </div>
   </div>
 </section>
@@ -294,18 +295,23 @@ const handleScroll = () => {
 
 
       <section id="about" className="about">
-        <h2 className="about-title">About Me</h2>
+        <h2 className="about-title">Something About Me
+
+
+</h2>
         <div className="about-container">
           <div className="about-text">
-         <p style={{ whiteSpace: 'pre-line' }}>
-  {`Aspiring Front-End Developer and Designer with hands-on experience in 
-  developing and launching a mobile business application as a freelance project 
-  using Flutter. Passionate about creating engaging user experiences and intuitive 
-  interfaces across web and mobile platforms. Eager to further develop 
-skills in web and mobile design, front-end technologies, and modern frameworks. 
-Looking for an opportunity to contribute to dynamic projects and grow as a professional
- in the field.`}
+       <p style={{ whiteSpace: 'pre-line' }}>
+  {`Hello! I'm Jenny, an aspiring Front-End Developer, Flutter Developer, 
+  and Designer with hands-on experience in developing  a mobile business 
+  application as a freelance project using Flutter. I'm passionate about 
+  creating engaging user experiences and intuitive interfaces across web 
+  and mobile platforms. I'm eager to further develop my skills in web 
+  and mobile design, front-end technologies, and modern frameworks. 
+  I'm looking for an opportunity to contribute to dynamic projects and 
+  grow as a professional in the field.`}
 </p>
+
 
           </div>
           <div className="about-boximage">
@@ -373,7 +379,7 @@ Looking for an opportunity to contribute to dynamic projects and grow as a profe
           <span className="experience-date">Nov. 2024 – Apr. 2025</span>
           <h3>Freelance Mobile App Developer</h3>
           <p className="experience-company">Neuralcore</p>
-          <p className="experience-desc">Developed cross-platform mobile applications using Flutter and Firebase for startup clients.</p>
+          <p className="experience-desc">Developed cross-platform mobile applications using Flutter, PHP and MYSQL for startup clients.</p>
         </div>
       </div>
 
@@ -382,7 +388,7 @@ Looking for an opportunity to contribute to dynamic projects and grow as a profe
           <span className="experience-date">Jul. 2024 – Sept. 2024</span>
           <h3>Junior Web Developer</h3>
           <p className="experience-company">HR Primo Services</p>
-          <p className="experience-desc">Assisted in building and maintaining web applications using HTML, CSS, JavaScript, and React.</p>
+          <p className="experience-desc">Assisted in building and maintaining web applications using HTML, CSS, JavaScript, and Tailwind.</p>
         </div>
       </div>
 
@@ -391,7 +397,7 @@ Looking for an opportunity to contribute to dynamic projects and grow as a profe
           <span className="experience-date">2022 – 2023</span>
           <h3>Graphic Designer</h3>
           <p className="experience-company">School of Computer Studies</p>
-          <p className="experience-desc">Created marketing visuals and social media graphics using Canva and Adobe Photoshop.</p>
+          <p className="experience-desc">Created marketing visuals and social media graphics using Canva.</p>
         </div>
       </div>
     </div>
@@ -468,16 +474,51 @@ Looking for an opportunity to contribute to dynamic projects and grow as a profe
 </section>
 
 {/* Project Section */}
-<section className="project-section">
+<section id= "projects" className="project-section">
   <div className="project-wrapper">
     {/* Left Column */}
     <div className="project-left">
       <h2 className="project-h2">A Glimpse of My Works</h2>
-      <div className="project-buttons">
-  <button className="filter-button" onClick={() => setSelectedCategory('Mobile')}>Mobile</button>
-  <button className="filter-button" onClick={() => setSelectedCategory('Website')}>Website</button>
-  <button className="filter-button" onClick={() => setSelectedCategory('Design')}>Design</button>
+ <div className="project-buttons"> 
+  <button
+    className={`filter-button ${selectedCategory === 'Mobile' ? 'active' : ''}`}
+    onClick={() => setSelectedCategory('Mobile')}
+  >
+    Mobile
+  </button>
+  
+  <button
+    className={`filter-button ${selectedCategory === 'Website' ? 'active' : ''}`}
+    onClick={() => setSelectedCategory('Website')}
+  >
+    Website
+  </button>
+  
+  <button
+    className={`filter-button ${selectedCategory === 'Design' ? 'active' : ''}`}
+    onClick={() => setSelectedCategory('Design')}
+  >
+    Design
+  </button>
 </div>
+<div className="project-description-left">
+  <p>
+Here are some of my recent works that showcase my skills in mobile app development, web development, and design.
+   You can explore more details by clicking on each project.  < br />
+   <br/>
+    To view additional projects, feel free to visit my Git repository.
+    <a 
+      href="https://github.com/ImJennyLyn?tab=repositories" 
+      className="view-more-link" 
+      target="_blank" 
+      rel="noopener noreferrer"
+    >
+      View More Projects
+    </a>
+  </p>
+</div>
+
+
 
     </div>
 
@@ -501,7 +542,7 @@ Looking for an opportunity to contribute to dynamic projects and grow as a profe
   </div>
 </section>
 
-<section className="contact-section">
+<section id="contact-section" className="contact-section">
 
   {/* Left Column */}
   <section className="contact-info">
