@@ -30,6 +30,7 @@ import som from "./images/som.png";
 
 
 function App() {
+  const [activeSection, setActiveSection] = useState('');
 
   const [scrolled, setScrolled] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState('Mobile');
@@ -42,7 +43,8 @@ const projects = [
     image: bizshop,
     tech: 'FLUTTER | MYSQL | PHP',
     title: 'Business Listing Shop Application',
-    description: 'Collaborate with your team with your team with your team.',
+    description: 'An app where local shops and entrepreneurs can create business pages, share their services, and get discovered by nearby users.',
+  link: 'https://github.com/ImJennyLyn/Finding'
   },
   {
     id: 2,
@@ -50,7 +52,9 @@ const projects = [
     image: sommo,
     tech: 'FLUTTER | FIREBASE',
     title: 'Soil Moisture Monitoring Application',
-    description: 'Collaborate with your team with your team with your team.',
+    description: 'SOMO Application Served as the user interface for farmers, allowing them to monitor and receive notification of  real-time soil moisture and surrounding conditions including the temperature and humidity.',
+      link: 'https://github.com/dheljohn/soil_monitoring_git'
+
   },
   {
     id: 3,
@@ -58,7 +62,8 @@ const projects = [
     image: explorer,
     tech: 'FLUTTER | FIREBASE',
     title: 'Astromind Explore Mini Games',
-    description: 'Collaborate with your team with your team with your team.',
+    description: 'Astromind Explorer is a one-of-a-kind game that combines challenges and luck-based fun in a seamless way. It provides a variety of activities and personalized brain exercises for an engaging experience',
+    link: 'https://github.com/ImJennyLyn/Astromind-Explorer'
   },
   {
     id: 4,
@@ -66,15 +71,17 @@ const projects = [
     image: hotel,
     tech: 'REACT JS| PHP | MYSQL',
     title: 'The Coast Hotel Booking Website',
-    description: 'Your portfolio to showcase your awesome skills.',
+    description: 'The Coast is a hotel room booking website built with React.js. It allows users to browse, view, and book hotel rooms easily with a clean and modern interface',
+    link:'https://github.com/ImJennyLyn/Hotel-Booking-System---The-Coast'
   },
   {
      id: 5,
     category: 'Website',
     image: snapp,
     tech: 'REACT JS| PHP | MYSQL',
-    title: 'Snap Photoboot Website',
-    description: 'Your portfolio to showcase your awesome skills.',
+    title: 'Snap Photobooth Website',
+    description: 'Snap PhotoBooth is a web-based photo booth application that allows users to capture photos using their webcam, edit them by adding stickers and text, and then save or download the final images.',
+    link: 'https://github.com/ImJennyLyn/snap-photobooth'
   },
   {
      id: 6,
@@ -82,7 +89,8 @@ const projects = [
     image: crudd,
     tech: 'HTML | TAILWIND | PHP | MYSQL',
     title: 'CRUD Operation Task',
-    description: 'Your portfolio to showcase your awesome skills.',
+    description: 'CRUD is a basic yet beautifully organized website where you can create, read, update, and delete information — like a mini admin system.It reflects how web apps work behind the scenes in real time.',
+ link:'https://github.com/ImJennyLyn/CRUD_PHP'
   },
   {
     id: 7,
@@ -175,6 +183,7 @@ const handleScroll = () => {
 };
 
   window.addEventListener('scroll', handleScroll);
+  window.addEventListener('scroll', handleActiveLinks);
 
   // ROLE TYPING EFFECT (unchanged)
   const roleElement = document.querySelector('.role');
@@ -208,25 +217,25 @@ const handleScroll = () => {
   // NAVBAR ACTIVE LINK ON SCROLL (unchanged)
   const sections = document.querySelectorAll("section");
   const navLinks = document.querySelectorAll("nav a");
+const handleActiveLinks = () => {
+  let current = "";
+  sections.forEach((section) => {
+    const sectionTop = section.offsetTop - 100;
+    if (window.pageYOffset >= sectionTop) {
+      current = section.getAttribute("id");
+    }
+  });
 
-  const handleActiveLinks = () => {
-    let current = "";
-    sections.forEach((section) => {
-      const sectionTop = section.offsetTop - 100;
-      if (window.pageYOffset >= sectionTop) {
-        current = section.getAttribute("id");
-      }
-    });
+  setActiveSection(current); // ✅ update the active section state
 
-    navLinks.forEach((link) => {
-      link.classList.remove("active");
-      if (link.getAttribute("href").includes(current)) {
-        link.classList.add("active");
-      }
-    });
-  };
+  navLinks.forEach((link) => {
+    link.classList.remove("active");
+    if (link.getAttribute("href").includes(current)) {
+      link.classList.add("active");
+    }
+  });
+};
 
-  window.addEventListener("scroll", handleActiveLinks);
 
   // BURGER MENU TOGGLE (unchanged)
   window.toggleMenu = function() {
@@ -254,10 +263,11 @@ const handleScroll = () => {
   });
 
   // ✅ Clean up all scroll listeners properly
-  return () => {
+   return () => {
     window.removeEventListener('scroll', handleScroll);
     window.removeEventListener('scroll', handleActiveLinks);
   };
+
 }, []);
 
   return (
@@ -269,15 +279,17 @@ const handleScroll = () => {
       <div></div>
       <div></div>
     </div>
-        <nav id="navbar">
-          <a href="#home">Home</a>
-          <a href="#about">About</a>
-          <a href="#Myexperience">Experience</a>
-          <a href="#services">Services</a>
-          <a href="#skills">Skills</a>
-          <a href="#projects">Projects</a>
-          <a className="contact-nav" href="#contact-section">Contact</a>
-        </nav>
+       <nav id="navbar">
+  <a href="#home" className={activeSection === 'home' ? 'active' : ''}>Home</a>
+  <a href="#about" className={activeSection === 'about' ? 'active' : ''}>About</a>
+  <a href="#Myexperience" className={activeSection === 'Myexperience' ? 'active' : ''}>Experience</a>
+  <a href="#services" className={activeSection === 'services' ? 'active' : ''}>Services</a>
+  <a href="#skills" className={activeSection === 'skills' ? 'active' : ''}>Skills</a>
+  <a href="#projects" className={activeSection === 'projects' ? 'active' : ''}>Projects</a>
+  <a href="#contact-section" className={`contact-nav ${activeSection === 'contact-section' ? 'active' : ''}`}>Contact</a>
+</nav>
+
+
       </header>
 
 <section id="home" className="home">
@@ -371,7 +383,7 @@ const handleScroll = () => {
     <div className="experience-card-container">
       <div className="experience-header">
      
-        <h2>Work Experience</h2>
+        <h2>My Work Experience</h2>
       </div>
 
       <div className="experience-item fade-in">
@@ -528,32 +540,73 @@ Here are some of my recent works that showcase my skills in mobile app developme
     .filter((project) => project.category === selectedCategory)
     .map((project) => (
       <div className="project-card" key={project.id}>
-        <img src={project.image} alt={project.title} className="project-image" />
+        {project.category === 'Design' ? (
+         <a href={project.image} target="_blank" rel="noopener noreferrer" className="project-image-wrapper">
+  <img src={project.image} alt={project.title} className="project-image" />
+  <div className="overlay-text">Preview</div>
+</a>
+
+        ) : (
+          <a
+            href={project.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="project-image-wrapper"
+          >
+            <img
+              src={project.image}
+              alt={project.title}
+              className="project-image"
+            />
+            <div className="overlay-text">View More</div>
+          </a>
+        )}
+
         <div className="project-content">
           <p className="project-category">{project.tech}</p>
           <h2 className="project-title">{project.title}</h2>
           <p className="project-description">{project.description}</p>
-          <button className="project-button">see more →</button>
         </div>
       </div>
     ))}
 </div>
 
-  </div>
+</div>
+
+
 </section>
 
 <section id="contact-section" className="contact-section">
 
   {/* Left Column */}
-  <section className="contact-info">
-    <h2>Get in Touch with Me</h2>
-    <p>I'm open for collaborations, freelance projects, or just a friendly chat.</p>
-    <p>Email me directly or use the form to send your message.</p>
-  </section>
+ <section className="contact-info">
+  <h2>Get in Touch with Me</h2>
+  <p>Let’s work together or simply connect. <br/>Send me a message or email anytime.</p>
+
+
+  <div className="contact-links">
+    <a href="mailto:vallador.jennlyn10@gmail.com" className="contact-link" target="_blank" rel="noopener noreferrer">
+      <i className="fas fa-envelope"></i> vallador.jennylyn10@gmail.com
+    </a>
+    
+    <a href="https://github.com/ImJennyLyn" className="contact-link" target="_blank" rel="noopener noreferrer">
+      <i className="fab fa-github"></i> github.com/ImJennyLyn
+    </a>
+
+    <a href="https://www.linkedin.com/in/jenny-lyn-vallador-bb0502368/" className="contact-link" target="_blank" rel="noopener noreferrer">
+      <i className="fab fa-linkedin"></i> linkedin.com/in/jenny-lyn-vallador
+    </a>
+
+    <a href="https://www.facebook.com/jennylyn.vallador" className="contact-link" target="_blank" rel="noopener noreferrer">
+      <i className="fab fa-facebook"></i> facebook.com/jennylyn.vallador
+    </a>
+  </div>
+</section>
+
 
   {/* Right Column */}
   <section className="contact-form">
-    <form action="mailto:yourname@example.com" method="POST" encType="text/plain">
+    <form action="mailto:vallador.jennylyn10@gmail.com" method="POST" encType="text/plain">
 
       <input type="text" name="name" placeholder="Your Name" required className="input-field" />
 
@@ -571,13 +624,11 @@ Here are some of my recent works that showcase my skills in mobile app developme
 
       
          <div class="footer">
-        <p class="footer-jenny">Jenny Lyn</p>
-        <div class="social">
-                <a href="https://github.com/ImJennyLyn"><i class="social-footer fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/jenny-lyn-vallador-421214283?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app&fbclid=IwZXh0bgNhZW0CMTAAAR1TLTlSvwYltHl5Eh8WkTnROCDYq2qldnDGKNYpav2zUmTD4DmKmq5dzK4_aem_Aa5CQGRQMwaFXmWFG_ZDS-_UYq1Xg9KbMXiCkAAOx-3uc37jC659R7JTkzkqCtMeZ78Fh4zK72h5frUXmWzs-AIa"><i class="social-footer fab fa-linkedin-in"></i></a>
-                <a href="https://www.instagram.com/lynxxa.ynnj/"><i class="social-footer fab fa-instagram"></i></a>
-              </div>
-        <p className="footer-text">&copy;All rights reserved</p>
+       
+              <p class="footer-text">✦✧✦ Crafted in a cozy corner of the universe — by Jenny ✦✧✦</p>
+<p class="footer-text">&copy; 2025 All rights reserved.</p>
+
+        
     </div>
                
     </>
